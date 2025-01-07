@@ -1,0 +1,491 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    background-color: #e3e3e3;
+    /* padding-bottom: 800px; */
+}
+
+.interface {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+header .btn-contato button, .hero-site button, .hoteis button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Estilo do header */
+header {
+    width: 100%;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 40px;
+}
+
+/* Estilo do botao menu-mobile */
+
+header .btn-menu-mobile {
+    display: none;
+    position: relative;
+    z-index: 9;
+}
+
+header .btn-menu-mobile div {
+    background: #fff;
+    height: 3px;
+    margin: 10px 0;
+    transition: .5s;
+}
+
+header .btn-menu-mobile .line-menu-mobile-1 {
+    width: 30px;
+}
+
+header .btn-menu-mobile .line-menu-mobile-2 {
+    width: 20px;
+}
+
+header.rolar .btn-menu-mobile div {
+    background-color: #000;
+}
+
+header .btn-menu-mobile .line-menu-mobile-1.ativo1 {
+    transform: rotate(45deg) translate(30%);
+    background: #fff;
+    margin-right: 10px;
+}
+
+header .btn-menu-mobile .line-menu-mobile-2.ativo2 {
+    transform: rotate(-45deg) translate(30%);
+    background: #fff;
+    margin-right: 10px;
+    width: 30px;
+}
+
+/* ---------------------------- */
+
+/* Estilo do menu-mobile */
+
+header .menu-mobile {
+    width: 0;
+    height: 0;
+    background: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    overflow: hidden;
+    transition: .5s;
+}
+
+header .menu-mobile nav ul li {
+    list-style: none;
+}
+
+header .menu-mobile nav {
+    width: 100%;
+}
+
+header .menu-mobile nav a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 0;
+    display: block;
+    transition: .5s;
+}
+
+header .menu-mobile nav a:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 15px #fff;
+}
+
+header .menu-mobile.abrir-menu {
+    width: 100%;
+    height: 100vh;
+}
+
+body.no-overflow {
+    overflow: hidden;
+}
+
+/* ---------------------------- */
+
+/* Estilo do menu dinamico */
+
+header .logo img.logo-preta {
+    display: none;
+}
+
+header.rolar {
+    background: #fff;
+    padding: 20px 0;
+    z-index: 5;
+    box-shadow: 0 0 10px #00000032;
+}
+
+header.rolar .menu-desktop nav ul li a {
+    color: #000;
+}
+
+header.rolar .btn-contato button {
+    border: 1px solid #000;
+    color: #000;
+}
+
+header.rolar .btn-contato button:hover {
+    background: #000;
+    color: #fff;
+}
+
+header.rolar .logo .logo-preta {
+    display: block;
+}
+
+header.rolar .logo .logo-branca {
+    display: none;
+}
+
+/* --------------------------- */
+
+header .menu-desktop nav ul {
+    list-style: none;
+}
+
+header .menu-desktop nav ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header .menu-desktop nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+.menu-desktop nav a:hover {
+    transform: scale(1.05);
+}
+
+
+/* Estilo do hero */
+
+section.hero-site {
+    height: 98vh;
+    background-image: url(../img/bg-inicio-site.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero-site .interface {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero h1 {
+    font-size: 4em;
+    line-height: 60px;
+    font-weight: 200;
+}
+
+.hero-site .txt-hero h1 span {
+    display: block;
+    font-weight: 800;
+}
+
+.hero-site .txt-hero p {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.hero-site .txt-hero p span {
+    display: block;
+}
+
+/* Estilo das vantagens */
+
+section.vantagens {
+    padding: 80px 0;
+}
+
+.vantagens .itens-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 60px;
+}
+
+.vantagens .itens-container .img-itens img {
+    max-width: 480px;
+}
+
+.vantagens .itens-container .txt-itens h3 {
+    font-size: 3em;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.vantagens .itens-container .txt-itens h3 span {
+    font-weight: 300;
+    
+}
+
+/* Estilo dos botoes de contato */
+
+section.contato {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.txt-contato, .icons-contato {
+    display: inline-block;
+    width: 50%;
+    
+    /* Quando definimos 2 elementos como inline-block
+    e ocuparem 50% da tela, ambos ganham uma margem a direita de 4px, por isso retiramos */
+    margin-right: -4px;
+    
+    /* O vertical-align - permite alinhas os elementos ao nivel horizontal */
+    vertical-align: middle;
+}
+
+.contato .txt-contato h3 {
+    font-size: 2.5em;
+    line-height: 50px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contato .txt-contato h3 span {
+    display: block;
+    font-weight: 700;
+}
+
+.contato .icons-contato a {
+    text-decoration: none;
+}
+
+.contato .icons-contato button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 60%;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    padding: 0 60px;
+    
+    background-color: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+    
+    transition: .5s;
+}
+
+.contato .icons-contato button i {
+    font-size: 18px;
+}
+
+.contato .icons-contato button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilo da seccao hoteis */
+
+section.hoteis {
+    height: 600px;
+    
+    background-image: url(../img/hotel-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    background-attachment: fixed;
+    
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.hoteis > .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000d7;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hoteis .interface {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.hoteis h3 {
+    font-size: 3em;
+    line-height: 50px;
+    font-weight: 200;
+}
+
+.hoteis h3 span {
+    display: block;
+    font-weight: 700;
+}
+
+.hoteis p {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Estilo da cessao como-funciona */
+
+section.como-funciona {
+    padding: 80px 0;
+}
+
+.txt-funciona, .instrucoes {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+.como-funciona .txt-funciona {
+    position: sticky;
+    top: 50%;
+    padding-bottom: 37px;
+}
+
+.como-funciona .txt-funciona h3 {
+    font-size: 4em;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+.como-funciona .txt-funciona h3 span {
+    display: block;
+    font-weight: 600;
+}
+
+.instrucoes .instru-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    margin-bottom: 40px;
+    border: 1px solid #000;
+    gap: 20px;
+    padding: 20px;
+}
+
+.instrucoes .instru-box img {
+    max-width: 100px;
+}
+
+.instrucoes .instru-box h4 {
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.instrucoes .instru-box h4 span {
+    font-weight: 300;
+}
+
+.instrucoes .instru-box p {
+    line-height: 20px;
+}
+
+/* Estilo do footer */
+
+footer {
+    background: #000;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .top-footer button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .5s;
+}
+
+footer .top-footer button:hover {
+    background: #fff;
+    color: #000;
+}
+
+footer .middle-footer {
+    padding: 20px 0;
+}
+
+footer .middle-footer a {
+    color: #fff;
+    margin: 0 15px;
+}
+
+footer .bottom-footer {
+    border-top: 1px solid #fff;
+}
+
+footer .bottom-footer p {
+    color: #fff;
+    margin-top: 10px;
+}
